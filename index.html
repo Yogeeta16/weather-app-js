@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>weatherapp</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <main>
+        <div class="weather-container">
+
+            <h1>CheCK Weather here</h1>
+
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Enter city name" required>
+                <button type="button" onclick="fetchSearchcity()">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
+
+            <div id="weatherInfo" class="weather-info">
+
+                <div>
+                    <img src="" alt="Weather Icon" class="weather-icon" id="weather-icon">
+                    <h1 id="weather-degree">--°C</h1>
+
+                    <h2 id="weather-city"></h2>
+
+                </div>
+                <div class="weather-detail-box">
+                    <div id="weather-humidity-box">
+
+                        <div class="weather-box-icon">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <div id="weather-humidity-box-val">
+                            <span id="weather-humidity">--% </span>
+                            <span>Humidity</span>
+                        </div>
+                    </div>
+                    <div id="weather-wind-box">
+                        <div class="weather-box-icon">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <div id="weather-wind-box-val">
+                            <span id="weather-wind">-- km/h</span>
+                            <span>Wind Speed</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div id="weatherInfo-errorbox" class="weather-info">
+                <p>city not found</p>
+            </div>
+        </div>
+
+
+        <script src="./script.js"></script>
+
+
+
+
+
+    </main>
+</body>
+
+</html>
